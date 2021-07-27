@@ -33,7 +33,6 @@ const hashMap = xObject || [{
     logo: 'https://www.w3.org/favicon.ico',
     logoType: 'img',
     url: 'https://www.w3.org',
-    initial: removehttp(node.url)[0].toUpperCase()
   }
 ]
 
@@ -42,7 +41,7 @@ const render = () => {
   a = $siteList.find('li:not(.last)').remove()
   hashMap.forEach((node, index) => {
 
-      const $li = $(`<li>
+    const $li = $(`<li>
     
         <div class="site">
           <div class="logo">${removehttp(node.url)[0].toUpperCase()}</div>
@@ -54,21 +53,16 @@ const render = () => {
       
     
     </li>`).insertBefore($lastLi)
-      $li.on('click', () => {
-        window.open(node.url)
-      })
+    $li.on('click', () => {
+      window.open(node.url)
+    })
 
-      $li.on('click', ".close", (e) => {
-        e.stopPropagation()
-        hashMap.splice(index, 1)
-        render()
-
-      })
-
-    }
-
-
-  )
+    $li.on('click', ".close", (e) => {
+      e.stopPropagation()
+      hashMap.splice(index, 1)
+      render()
+    })
+  })
 }
 
 
@@ -87,18 +81,55 @@ $(".addButton").on('click', () => {
   console.log(hashMap.logo)
   render()
 })
+
 window.onbeforeunload = () => {
   const string = JSON.stringify(hashMap) //将hashMap变成字符串
   localStorage.setItem('x', string)
 }
-$(document).on('keypress', (e) => {
+$(document).on('keypress', (e) => { // 点击事件
+  console.log(e.key)
+  // let n = []
+
   const {
     key
   } = e
   for (let i = 0; i < hashMap.length; i++) {
     if (removehttp(hashMap[i].url)[0].toLowerCase() === key) {
-      window.open(hashMap[i].url)
-      break
+      // n.push(i)
+      window.open(hashMap[n[0]].url)
+
+
     }
   }
+
+  // if (n.length === 1) {
+  // window.open(hashMap[n[0]].url)
+  // } else {
+  //   window.open(hashMap[(n[0]].url)
+  // }
+})
+
+
+$(document).on('keypress', (e) => {
+
+  const {
+    key
+  } = e
+  let a = {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 2,
+    5: 2,
+    6: 2,
+    7: 2,
+    8: 2,
+    9: 2,
+    0: 2
+  }
+  if (key in a) {
+    c = key - 1;
+    window.open(hashMap[c].url)
+  }
+
 })

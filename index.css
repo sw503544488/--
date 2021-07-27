@@ -25,19 +25,16 @@ body {
 
 .globalHeader {
   margin: 20px;
-
 }
 
 .searchForm {
   display: flex;
   justify-content: center;
   /* border: 1px solid red; */
-
 }
 
 
 .searchForm>input {
-
   width: 100%;
   width: 238.33px;
   height: 40px;
@@ -68,14 +65,12 @@ body {
   margin: 20;
   /* justify-content: space-between; */
   justify-content: flex-start;
-
   /* border: 1px solid red; */
 }
 
 
 
 .siteList .site {
-
   position: relative;
   width: 150px;
   display: flex;
@@ -86,8 +81,6 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
-
-
 }
 
 .siteList .site>.logo {
@@ -108,8 +101,6 @@ body {
   align-items: center;
   text-align: center;
   overflow: hidden;
-
-
 }
 
 .siteList .addButton {
@@ -121,14 +112,11 @@ body {
   flex-direction: column;
   background-color: white;
   border: 1px solid #ddd;
-
-
 }
 
 
 .imgcontainer {
   position: relative;
-
   display: block;
   width: 25px;
   height: 25px;
@@ -137,7 +125,6 @@ body {
 .imgicon {
   position: relative;
   top: -10px;
-
 }
 
 .siteList .addButton .icon {
@@ -156,7 +143,6 @@ body {
   display: flex;
   justify-self: center;
   align-items: center;
-
 }
 
 .img {
@@ -179,7 +165,6 @@ body {
   width: 30px;
   height: 30px;
   border: 1px solid transparent;
-
 }
 
 .site .close>.closeimg {
@@ -189,7 +174,6 @@ body {
 }
 
 .siteList>li {
-
   margin-left: 11px;
   padding: 11px;
 
@@ -217,7 +201,6 @@ body {
   }
 
   .site .close {
-
     display: none;
   }
 
@@ -225,6 +208,4 @@ body {
     display: initial;
     cursor: default;
   }
-
-
 }
