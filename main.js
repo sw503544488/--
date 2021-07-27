@@ -21,7 +21,7 @@ const render = () => {
         <div class="site">
           <div class="logo">${removehttp(node.url)[0].toUpperCase()}</div>
         
-         <span class="imgcontainer"><img src=${node.logo} class='imgicon' width='25px' height='25px'  ></span> <div class="link">${ removehttp(node.url) }</div>
+         <span class="imgcontainer"><img src=${node.logo} onerror="this.src='errorimg.jpg' " class='imgicon' width='25px' height='25px' alt="1" ></span> <div class="link">${ removehttp(node.url) }</div>
         </div>
       </a>
     
@@ -45,8 +45,11 @@ const hashMap = xObject || [{
     logo: 'https://developer.mozilla.org/favicon.ico',
     logoType: 'img',
     url: 'https://developer.mozilla.org/'
-  },
-
+  }, {
+    logo: 'https://www.w3.org/favicon.ico',
+    logoType: 'img',
+    url: 'https://www.w3.org'
+  }
 
 ]
 
