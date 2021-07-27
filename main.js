@@ -88,7 +88,7 @@ window.onbeforeunload = () => {
 }
 $(document).on('keypress', (e) => { // 点击事件
   console.log(e.key)
-  // let n = []
+  let n = []
 
   const {
     key
@@ -96,7 +96,7 @@ $(document).on('keypress', (e) => { // 点击事件
   for (let i = 0; i < hashMap.length; i++) {
     if (removehttp(hashMap[i].url)[0].toLowerCase() === key) {
       // n.push(i)
-      window.open(hashMap[n[0]].url)
+      window.open(hashMap[i].url)
 
 
     }
@@ -128,7 +128,11 @@ $(document).on('keypress', (e) => {
     0: 2
   }
   if (key in a) {
-    c = key - 1;
+    let c = key - 1;
+    if (c === -1) {
+      window.open(hashMap[10].url)
+
+    }
     window.open(hashMap[c].url)
   }
 
