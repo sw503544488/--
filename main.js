@@ -112,7 +112,7 @@ $(document).on('keypress', (e) => { // 点击事件
     if (removehttp(hashMap[i].url)[0].toLowerCase() === key) {
       // n.push(i)
       window.open(hashMap[i].url)
-
+      break
 
     }
   }
