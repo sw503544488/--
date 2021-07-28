@@ -45,7 +45,7 @@ const render = () => {
         <div class="site">
           <div class="logo">${removehttp(node.url)[0].toUpperCase()}</div>
         
-         <span class="imgcontainer"><img src=${node.logo}  onerror="this.src='errorimg.jpg'" class='imgicon' width='25px' height='25px' alt="1" ></span>
+         <span class="imgcontainer"><img src=${node.logo}  width='25px' height='25px' onerror="this.src='errorimg.png'  " class='imgicon'  alt="1" ></span>
           <div class="link">${ removehttp(node.url) }</div>
        <div class="close"><img src='close.png'  width='10px' height='10px' class='closeimg' ></div>
          </div>
