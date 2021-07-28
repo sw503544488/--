@@ -68,6 +68,8 @@ const render = () => {
 render()
 
 $(".addButton").on('click', () => {
+  $siteList.find('li:not(.last)').remove()
+
   let url = window.prompt('请问你要添加的网址是啥?')
   if (url.indexOf('http') !== 0) {
     url = 'https://' + url
@@ -99,7 +101,6 @@ $('#inputbox').on('blur', (e) => {
 $(document).on('keypress', (e) => { // 点击事件
   if (focus === 1) {
     return
-
   }
   console.log(e.key)
   let n = []
@@ -127,7 +128,6 @@ $(document).on('keypress', (e) => { // 点击事件
 $(document).on('keypress', (e) => {
   if (focus === 1) {
     return
-
   }
   const {
     key
