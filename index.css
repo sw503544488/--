@@ -43,6 +43,7 @@ body {
   padding: 0 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+
 }
 
 .searchForm>button {
@@ -80,10 +81,12 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  border: 1px solid #ddd;
+  /* background-color: white;
+  border: 1px solid #ddd; */
   border-radius: 4px;
   cursor: pointer;
+  color: rgb(13, 13, 14);
+  transition: background-color .3s ease .1s;
 }
 
 .siteList .site>.logo {
@@ -113,8 +116,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: white;
-  border: 1px solid #ddd;
+  /* background-color: white; */
+  /* border: 1px solid #ddd; */
+  color: rgb(2, 2, 2);
+  transition: background-color 0.3 ease .1s;
+
+
 }
 
 
@@ -182,6 +189,23 @@ body {
 
 }
 
+@media (max-width:500px) {
+  .siteList .addButton {
+
+    background-color: white;
+
+  }
+
+  .siteList .site {
+
+    background-color: white;
+    border: 1px solid #ddd;
+
+  }
+
+}
+
+
 @media (min-width:500px) {
   .searchForm {
     max-width: 400px;
@@ -207,8 +231,32 @@ body {
     display: none;
   }
 
+  .addButton:hover {
+
+    background-color: white;
+    color: black;
+  }
+
+
   .site:hover>.close {
     display: initial;
     cursor: default;
+    background-color: white;
+
+  }
+
+  .site:hover {
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+
+  }
+
+  .site:hover>.close {
+    display: initial;
+    cursor: default;
+    background-color: white;
+
   }
 }
